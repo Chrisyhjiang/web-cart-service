@@ -1,5 +1,9 @@
 package com.webcart.project.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "categories")
 public class Category {
     public void setCategoryId(long categoryId) {
         this.categoryId = categoryId;
@@ -14,6 +18,7 @@ public class Category {
         this.categoryName = categoryName;
     }
 
+    @Id
     private long categoryId;
 
     public String getCategoryName() {
